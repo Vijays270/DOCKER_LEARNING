@@ -1,7 +1,9 @@
 # DOCKER_LEARNING
 Basics of Docker &lt;In the end How to Push the image to the Docker Hub from>
+
 [vjs@server2 ~]$ su -
 Password:
+
 [root@server2 ~]# docker pull node
 Using default tag: latest
 latest: Pulling from library/node
@@ -16,6 +18,7 @@ cacfd624c54a: Pull complete
 Digest: sha256:914458d8617650599ec2c05f6754403a1ce08cb471b0b1de1de439c539f8d45f
 Status: Downloaded newer image for node:latest
 docker.io/library/node:latest
+
 [root@server2 ~]#
 [root@server2 ~]# docker images
 REPOSITORY       TAG       IMAGE ID       CREATED         SIZE
@@ -39,8 +42,10 @@ b97f36a58a2e   my-first-image   "echo 'Hello, Docker…"   31 minutes ago   Exit
 00a0ef2603dd   my-first-image   "echo 'Hello, Docker…"   33 minutes ago   Exited (0) 33 minutes ago             confident_volhard
 19a254bd8a1f   hello-world      "/hello"                 39 minutes ago   Exited (0) 39 minutes ago             sleepy_banzai
 [root@server2 ~]#
+
 [root@server2 ~]# #While I am running the conatiner "run", but it is suddenly stopped after running, because need a terminal window for the node commands, if command terminal is not attached to  the node container, there is no work for the node, It is exited because of command terminal not attached with conatiner.
 [root@server2 ~]#
+
 #To_Attach_terminal_with_container: docker run -it <cont.name>
 [root@server2 ~]# docker run -it node
 Welcome to Node.js v22.6.0.
@@ -54,7 +59,6 @@ undefined
 undefined
 
 # Docker container (of image node) is running
-
 [root@server2 ~]# docker ps -a
 CONTAINER ID   IMAGE            COMMAND                  CREATED          STATUS                      PORTS     NAMES
 fb5dcfaadaa9   node             "docker-entrypoint.s…"   4 minutes ago    Up 4 minutes                          funny_ride
@@ -299,6 +303,7 @@ Digest: sha256:d95548aea255911ea36ebb0dbdeac70960d16fa04e3f7337f9b358545ecac1b9
 Status: Downloaded newer image for vijay270/simple_image:latest
 docker.io/vijay270/simple_image:latest
 [root@server2 simple_app]#
+
 
 #CHECKING_THE_PULLED_IMAGE_BY_CLI
 
